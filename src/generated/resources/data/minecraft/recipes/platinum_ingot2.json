@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "terrariamod:raw_platinum"
+  },
+  "result": "terrariamod:platinum_ingot",
+  "experience": 1.0,
+  "cookingtime": 480
+}

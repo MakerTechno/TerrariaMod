@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "terrariamod:lead_ores"
+  },
+  "result": "terrariamod:lead_ingot",
+  "experience": 1.0,
+  "cookingtime": 280
+}

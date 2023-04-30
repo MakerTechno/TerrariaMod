@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "terrariamod:tin_ingot",
+    "terrariamod:lead_ingot",
+    "terrariamod:silver_ingot",
+    "terrariamod:tungsten_ingot",
+    "terrariamod:platinum_ingot",
+    "terrariamod:nether_crystal_ingot",
+    "terrariamod:end_predarkmaterial_ingot"
+  ]
+}

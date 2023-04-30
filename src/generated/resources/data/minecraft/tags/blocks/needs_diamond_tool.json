@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "terrariamod:platinum_ore",
+    "terrariamod:deepslate_platinum_ore",
+    "terrariamod:end_predarkmaterial_ore",
+    "terrariamod:steel_making_furnace"
+  ]
+}

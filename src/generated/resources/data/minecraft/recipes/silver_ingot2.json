@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "terrariamod:raw_silver"
+  },
+  "result": "terrariamod:silver_ingot",
+  "experience": 1.6,
+  "cookingtime": 320
+}

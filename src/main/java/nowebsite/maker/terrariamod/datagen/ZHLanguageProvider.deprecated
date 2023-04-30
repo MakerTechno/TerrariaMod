@@ -1,0 +1,79 @@
+
+package nowebsite.maker.terrariamod.datagen;
+
+import nowebsite.maker.terrariamod.TerrariaMod;
+import nowebsite.maker.terrariamod.setup.Registration;
+import com.minecraft.data.DataGenerator;
+
+import static nowebsite.maker.terrariamod.setup.ModSetup.TAB_NAME;
+
+public class ZHLanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
+    public ZHLanguageProvider(DataGenerator generator, String locale) {
+        super(generator, TerrariaMod.MODID,locale);
+    }
+
+    @Override
+    protected void addTranslations() {
+
+        /*Mod special group*/
+        add("itemGroup."+TAB_NAME,"泰拉瑞亚模组");
+
+        /*Magic mirror*/
+        add(Registration.BRICK_MIRROR.get(),"破碎的镜子");
+
+        /*Terraria mod info*/
+        add(Registration.TERRARIA_MOD_INFO.get(),"泰拉瑞亚模组信息");
+
+        add(Registration.TEST_32767_STICK.get(),"§k32767伤害测试棒");
+
+        /*Tins*/
+        add(Registration.TIN_ORE.get(),"锡矿");
+        add(Registration.DEEPSLATE_TIN_ORE.get(),"深层锡矿");
+        add(Registration.RAW_TIN.get(),"粗锡");
+        add(Registration.TIN_INGOT.get(),"锡锭");
+
+        /*Leads*/
+        add(Registration.LEAD_ORE.get(),"铅矿");
+        add(Registration.DEEPSLATE_LEAD_ORE.get(),"深层铅矿");
+        add(Registration.RAW_LEAD.get(),"粗铅");
+        add(Registration.LEAD_INGOT.get(),"铅锭");
+        add(Registration.LEAD_HELMET.get(),"铅质头盔");
+        add(Registration.LEAD_CHESTPLATE.get(),"铅质胸甲");
+        add(Registration.LEAD_LEGGINGS.get(),"铅质护腿");
+        add(Registration.LEAD_BOOTS.get(),"铅质靴子");
+        add(Registration.LEAD_SWORD.get(),"铅剑");
+        add(Registration.LEAD_PICKAXE.get(),"铅镐");
+        add(Registration.LEAD_HOE.get(),"铅锄");
+        add(Registration.LEAD_AXE.get(),"铅斧");
+        add(Registration.LEAD_SHOVEL.get(),"铅铲");
+
+        /*Silver*/
+        add(Registration.SILVER_ORE.get(),"银矿");
+        add(Registration.DEEPSLATE_SILVER_ORE.get(),"深层银矿");
+        add(Registration.RAW_SILVER.get(),"粗银");
+        add(Registration.SILVER_INGOT.get(),"银锭");
+
+        /*Tungsten*/
+        add(Registration.TUNGSTEN_ORE.get(),"钨矿");
+        add(Registration.DEEPSLATE_TUNGSTEN_ORE.get(),"深层钨矿");
+        add(Registration.RAW_TUNGSTEN.get(),"粗钨");
+        add(Registration.TUNGSTEN_INGOT.get(),"钨锭");
+
+        /*Platinum*/
+        add(Registration.PLATINUM_ORE.get(),"铂金矿");
+        add(Registration.DEEPSLATE_PLATINUM_ORE.get(),"深层铂金矿");
+        add(Registration.RAW_PLATINUM.get(),"粗铂金");
+        add(Registration.PLATINUM_INGOT.get(),"铂金锭");
+
+        /*Nether crystals*/
+        add(Registration.NETHER_CRYSTAL_ORE.get(),"下界水晶矿");
+
+        /*End pre*/
+        add(Registration.END_PREDARKMATERIAL_ORE.get(),"末地极硬合金矿");
+
+        /*Special blocks*/
+        add(Registration.STEEL_MAKING_FURNACE.get(),"高炉(nm(文化输出))");
+
+    }
+}
+

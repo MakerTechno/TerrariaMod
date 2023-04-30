@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "terrariamod:end_predarkmaterial_ore"
+  },
+  "result": "terrariamod:end_predarkmaterial_ingot",
+  "experience": 0.6,
+  "cookingtime": 3000
+}

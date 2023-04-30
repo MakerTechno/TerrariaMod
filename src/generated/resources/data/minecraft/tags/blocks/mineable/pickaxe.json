@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "terrariamod:tin_ore",
+    "terrariamod:deepslate_tin_ore",
+    "terrariamod:lead_ore",
+    "terrariamod:deepslate_lead_ore",
+    "terrariamod:silver_ore",
+    "terrariamod:deepslate_silver_ore",
+    "terrariamod:tungsten_ore",
+    "terrariamod:deepslate_tungsten_ore",
+    "terrariamod:platinum_ore",
+    "terrariamod:deepslate_platinum_ore",
+    "terrariamod:nether_crystal_ore",
+    "terrariamod:end_predarkmaterial_ore",
+    "terrariamod:steel_making_furnace"
+  ]
+}

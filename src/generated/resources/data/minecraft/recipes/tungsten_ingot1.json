@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "terrariamod:tungsten_ores"
+  },
+  "result": "terrariamod:tungsten_ingot",
+  "experience": 1.0,
+  "cookingtime": 400
+}

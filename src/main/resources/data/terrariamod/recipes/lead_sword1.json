@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "KXN",
+    "KXN",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "terrariamod:lead_ingot"
+    },
+    "K": {
+      "item": "terrariamod:nether_crystal_ingot"
+    },
+    "N": {
+      "item": "terrariamod:end_predarkmaterial_ingot"
+    }
+  },
+  "result": {
+    "item": "terrariamod:lead_sword"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "terrariamod:block/tin_ore"
+    }
+  }
+}

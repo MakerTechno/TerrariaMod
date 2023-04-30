@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "terrariamod:raw_tungsten"
+  },
+  "result": "terrariamod:tungsten_ingot",
+  "experience": 1.0,
+  "cookingtime": 310
+}

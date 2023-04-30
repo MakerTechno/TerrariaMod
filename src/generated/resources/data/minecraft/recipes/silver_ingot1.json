@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "terrariamod:silver_ores"
+  },
+  "result": "terrariamod:silver_ingot",
+  "experience": 1.6,
+  "cookingtime": 340
+}

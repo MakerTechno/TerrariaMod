@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "terrariamod:tin_ores"
+  },
+  "result": "terrariamod:tin_ingot",
+  "experience": 0.6,
+  "cookingtime": 150
+}

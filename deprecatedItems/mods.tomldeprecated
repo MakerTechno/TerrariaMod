@@ -1,0 +1,37 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" #mandatory
+license="Ti Works:保留所有权利"
+#issueTrackerURL="https://?/" #optional
+[[mods]] #mandatory
+modId="terrariamod" #mandatory
+version="0.0.1" #mandatory
+displayName="泰拉瑞亚模组" #mandatory
+#updateJSONURL="https://?/updates.json" #optional
+displayURL="https://www.bilibili.com/video/BV1GJ411x7h7/" #optional
+logoFile="Terraria.png" #optional
+credits="让我们行动起来，让Minecraft更好。" #optional
+authors='''Ti works几乎所有成员(有的人活着，他仍在摸鱼，猜猜是哪个小烧杯呢(乐))
+Maker负责编写这个模组并领导团队.
+Kether制定规则并权衡模组可玩性，和进行性能测试.
+(瞧呐！有鱼在沙滩上！摸摸~~~~)
+Joker看起来正在做些什么，但现在我们无从得知.
+Rainbow,额......我邀请他加入了这个团队，不过让他干什么好呢？(也许我应该让他给我们加滤镜？？？)''' #optional
+#mandatory
+description='''
+泰拉瑞亚模组(Terraria Mod)!
+仍在施工小心地滑!
+(ps:你绝对不想知道那个网页里面有什么.)
+'''
+[[dependencies.terrariamod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[40,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.terrariamod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19.1)"
+    ordering="NONE"
+    side="BOTH"
+#Good evening, madam. Well...should I say now is midnight?---One forgotten night,0 O'clock. (Oh no! My hairs! :',D)

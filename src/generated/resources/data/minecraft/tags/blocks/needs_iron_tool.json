@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "terrariamod:silver_ore",
+    "terrariamod:deepslate_silver_ore",
+    "terrariamod:tungsten_ore",
+    "terrariamod:deepslate_tungsten_ore",
+    "terrariamod:nether_crystal_ore"
+  ]
+}

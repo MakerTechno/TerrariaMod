@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "terrariamod:nether_crystal_ore"
+  },
+  "result": "terrariamod:nether_crystal_ingot",
+  "experience": 1.2,
+  "cookingtime": 1800
+}

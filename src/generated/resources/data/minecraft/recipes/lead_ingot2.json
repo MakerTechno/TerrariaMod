@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "terrariamod:raw_lead"
+  },
+  "result": "terrariamod:lead_ingot",
+  "experience": 1.0,
+  "cookingtime": 260
+}

@@ -5,6 +5,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import nowebsite.maker.terrariamod.EntityClass.DemonEye;
 import nowebsite.maker.terrariamod.EntityClass.DemonEyeModel;
+//import nowebsite.maker.terrariamod.EntityClass.boss.Cthulhu;
 import nowebsite.maker.terrariamod.ItemClass.*;
 import nowebsite.maker.terrariamod.ItemClass.ManaPotionsF.GreaterManaPotion;
 import nowebsite.maker.terrariamod.ItemClass.ManaPotionsF.LesserManaPotion;
@@ -103,7 +104,13 @@ public class Registration {
             .setShouldReceiveVelocityUpdates(false)
             .build("demon_eye"));
     public static final RegistryObject<Item> DEMON_EYE_EGG = ITEMS.register("demon_eye",()->new ForgeSpawnEggItem(DEMON_EYE, 0xff0000, 0x00ff00, ITEM_PROPERTIES));
-
+    /*public static final RegistryObject<EntityType<Cthulhu>> BOSS_CTHULHU = ENTITIES.register("cthulhu",()->EntityType.Builder
+            .of(Cthulhu::new, MobCategory.MONSTER)
+            .sized(0.6f, 0.6f)
+            .clientTrackingRange(8)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("cthulhu"));
+*/
     /*----------------------------------------------MANA-------------------------------------------------*/
     public static final RegistryObject<Item> MANA_CRYSTAL = ITEMS.register("mana_crystal", ()->new ManaCrystal(ITEM_PROPERTIES));
     public static final RegistryObject<Item> ARCANE_CRYSTAL = ITEMS.register("arcane_crystal", ()->new ArcaneCrystal(ITEM_PROPERTIES));

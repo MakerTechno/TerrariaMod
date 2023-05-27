@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '0.0.2'
+version = '0.0.2-snapshot-v1'
 group = 'nowebsite.maker.terrariamod'
 archivesBaseName = 'terrariamod'
 

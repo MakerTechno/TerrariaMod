@@ -4,7 +4,7 @@ license="Ti Works: All rights reserved"
 #issueTrackerURL="https://?/" #optional
 [[mods]] #mandatory
 modId="terrariamod" #mandatory
-version="0.0.2" #mandatory
+version="0.0.2-snapshot-v1" #mandatory
 displayName="Terraria Mod" #mandatory
 #updateJSONURL="https://?/updates.json" #optional
 displayURL="https://www.bilibili.com/video/BV1GJ411x7h7/" #optional

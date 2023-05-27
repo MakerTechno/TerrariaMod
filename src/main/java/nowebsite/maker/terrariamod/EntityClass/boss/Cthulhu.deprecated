@@ -1,0 +1,140 @@
+package nowebsite.maker.terrariamod.EntityClass.boss;
+
+import com.google.common.collect.Sets;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.server.level.ServerBossEvent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Mth;
+import net.minecraft.world.BossEvent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntitySelector;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import nowebsite.maker.terrariamod.EntityClass.AIs.CthulhuAI;
+import nowebsite.maker.terrariamod.setup.Registration;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
+import java.util.function.Predicate;
+
+public class Cthulhu extends Monster implements Enemy {
+    private boolean isSecondForm = false;
+    private int rotationTicks = 0;
+    private final ServerBossEvent cthulhuEvent = (ServerBossEvent)(new ServerBossEvent(new TranslatableComponent("entity.terrariamod.cthulhu"), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS)).setPlayBossMusic(true).setCreateWorldFog(true);
+    private static final Predicate<Entity> VALID_PLAYER = EntitySelector.ENTITY_STILL_ALIVE.and(EntitySelector.withinDistance(0.0D, 128.0D, 0.0D, 192.0D));
+    private static UUID cthulhuUUID;
+
+
+    public Cthulhu(EntityType<? extends Monster> pEntityType, Level pLevel) {
+        super(pEntityType, pLevel);
+        scanState();
+        this.noPhysics = true;
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        scanState();
+        this.cthulhuEvent.setVisible(true);
+        if (!this.isSecondForm && this.getHealth() <= this.getMaxHealth() / 2) {
+            this.isSecondForm = true;
+            // Update the model and the attributes here
+
+        }if (this.isSecondForm) {
+            // 在5秒（100 ticks）内旋转5圈（360度*5）
+            if (this.rotationTicks < 100) {
+                this.yBodyRot += (360 * 5) / 100.0F;
+                this.yBodyRot = Mth.wrapDegrees(this.yBodyRot);
+                this.yHeadRot = this.yBodyRot;
+                this.rotationTicks++;
+            }
+        }
+        if (!this.cthulhuEvent.getPlayers().isEmpty()) {
+            this.kill();
+        }
+    }
+
+    public void updateBoss(Cthulhu cthulhu) {
+        if (cthulhu.getUUID().equals(cthulhuUUID)) {
+            this.cthulhuEvent.setProgress(cthulhu.getHealth() / cthulhu.getMaxHealth());
+            if (cthulhu.hasCustomName()) {
+                this.cthulhuEvent.setName(cthulhu.getDisplayName());
+            }
+        }
+
+    }
+
+    public void scanState(){
+        List<? extends Cthulhu> list = this.getServer().getLevel(this.getLevel().dimension()).getEntities(Registration.BOSS_CTHULHU.get(), LivingEntity::isAlive);
+        if (!list.isEmpty()) {
+            Cthulhu cthulhu = list.get(0);
+            this.uuid = cthulhu.getUUID();
+        }
+    }
+    @Override
+    public void kill() {
+        super.kill();
+        this.cthulhuEvent.setProgress(0.0F);
+        this.cthulhuEvent.setVisible(false);
+    }
+
+    private void updatePlayers() {
+        Set<ServerPlayer> set = Sets.newHashSet();
+
+        for(ServerPlayer serverplayer : this.level.getServer().getLevel(this.level.dimension()).getPlayers(VALID_PLAYER)) {
+            this.cthulhuEvent.addPlayer(serverplayer);
+            set.add(serverplayer);
+        }
+
+        Set<ServerPlayer> set1 = Sets.newHashSet(this.cthulhuEvent.getPlayers());
+        set1.removeAll(set);
+
+        for(ServerPlayer serverplayer1 : set1) {
+            this.cthulhuEvent.removePlayer(serverplayer1);
+        }
+
+    }
+
+    @Override
+    public boolean save(@NotNull CompoundTag pCompound) {
+        return super.save(pCompound);
+    }
+
+    @Override
+    public void load(@NotNull CompoundTag pCompound) {
+        super.load(pCompound);
+    }
+
+    @Override
+    public void travel(@NotNull Vec3 pTravelVector) {
+        super.travel(pTravelVector);
+    }
+
+    @Override
+    public boolean isCurrentlyGlowing() {
+        return true;
+    }
+
+    @Override
+    protected void registerGoals() {
+        this.goalSelector.addGoal(0,new CthulhuAI(this));
+    }
+
+    public boolean isSecondForm() {
+        return isSecondForm;
+    }
+
+    public void setSecondForm(boolean secondForm) {
+        isSecondForm = secondForm;
+    }
+
+    public void SecModel(){
+    }
+}

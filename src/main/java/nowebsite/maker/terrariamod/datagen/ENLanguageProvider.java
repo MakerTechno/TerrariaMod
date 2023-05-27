@@ -35,6 +35,8 @@ public class ENLanguageProvider extends net.minecraftforge.common.data.LanguageP
         add(Registration.DEMON_EYE.get(),"Demon eye");
         add(Registration.DEMON_EYE_EGG.get(), "Demon eye egg");
 
+        //add(Registration.BOSS_CTHULHU.get(),"Cthulhu");
+
         add(Registration.TEST_32767_STICK.get(),"Test 32767 stick");
         add(Registration.MAGIC_GUN.get(), "Magic gun");
 
